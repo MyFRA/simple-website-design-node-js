@@ -2,6 +2,9 @@
 const express = require('express');
 const path = require('path');
 
+// Require database connection
+const db = require('./config/config');
+
 // Require routes
 const home = require('./routes/home');
 const login = require('./routes/login');
