@@ -1,3 +1,547 @@
 <%- include('./../partials/header'); -%>
-<h1>okokok</h1>
+<div class="landing-hero row mx-0 align-content-center justify-content-center">
+    <div class="title-hero col-lg-6 order-2 order-lg-1 d-flex flex-column container pl-lg-5 justify-content-center">
+        <h1 class="font-weight-bold display-4 pl-lg-3 ml-lg-5 quicksand">Tunjukan Karyamu, Kepada Semua Orang</h1>
+        <p class="ml-lg-5 mt-3 pl-lg-3 text-muted">Bergabunglah bersama kami dengan 598 desainer lainya.</p>
+        <div class="ml-lg-5 mt-3 pl-lg-3 ">
+            <a class="btn btn-danger btn-lg new-button " href=""><i class="fas fa-sign-in-alt mr-2"></i> Gabung</a>
+        </div>
+    </div>
+    <div class="image-container-hero col-lg-6 order-1 order-lg-2">
+        <img class="" src="./images/wfh_1.svg" alt="">
+    </div>
+</div>
+
+
+<div class="card card-section-category">
+    <section class="category px-5 px-lg-5 py-1 mx-lg-5 d-flex justify-content-between align-items-center">
+        <div class="btn-group mr-5 pl-4 mb-md-0 mb-3 d-inline-block">
+            <button class=" btn dropdown-toggle px-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Terbaru</button>
+
+            <div class="dropdown-menu mt-2">
+                <a class="dropdown-item text-muted active-dropdown-kategori" href="#">Terbaru</a>
+                <a class="dropdown-item text-muted" href="#">Populer</a>
+            </div>
+        </div>
+        <div class="d-inline-block wrap-list-by-category">
+            <ul class="d-flex list-unstyled align-items-center">
+                <li class="mt-3"><a class="active" href="">Semua</a></li>
+                <li class="mt-3"><a href="">Anime</a></li>
+                <li class="mt-3"><a href="">Ilustrasi</a></li>
+                <li class="mt-3"><a href="">Web Desain</a></li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<div class="px-4 pt-4 search-container">
+    <div class="d-flex align-items-center justify-content-end">
+        <input class="mx-2 rounded" type="text" name="keyword" id="">
+        <button class="btn btn-sm btn-danger new-button" type="submit">Cari</button>
+    </div>
+</div>
+
+
+<section id="content-wrapper-design" class="content my-4 px-5">
+    <div class="row row-content-wrapper-design">
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/wfh_1.svg');"></div>
+                    </div>
+                </div>
+
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image overflow-hidden">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/wallpaperflare.com_wallpaper.jpg');"></div>
+                        {{!-- <img id="imageLikedByUsers" class="images-uploaded-by-users" src="./images/wallpaperflare.com_wallpaper.jpg" alt=""      > --}}
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/vocaloid_series_websiteprofile_800px.jpg');"></div>
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image overflow-hidden">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/PngItem_5135373.png');"></div>
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image overflow-hidden">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/Daco_2400672.png');"></div>
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image overflow-hidden">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/863080.png');"></div>
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image overflow-hidden">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/714077.png');"></div>
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image overflow-hidden">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/713297.png');"></div>
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14p1;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image overflow-hidden">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/5abacc01d0dab1525f22df0b7d6f6982.png');"></div>
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image overflow-hidden">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/wallpaperflare.com_wallpaper.jpg');"></div>
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image overflow-hidden">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/vocaloid_series_websiteprofile_800px.jpg');"></div>
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image">
+                    <div class="px-5">
+                        <div class="images-uploaded-by-users" style="background: url('./images/PngItem_5135373.png');"></div>
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+              <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image overflow-hidden">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/714077.png');"></div>
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image overflow-hidden">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/713297.png');"></div>
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image overflow-hidden">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/5abacc01d0dab1525f22df0b7d6f6982.png');"></div>
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 py-4 px-2">
+            <div class="card-content-wrapper">
+                <div class="image overflow-hidden">
+                    <div>
+                        <div class="images-uploaded-by-users" style="background: url('./images/wallpaperflare.com_wallpaper.jpg');"></div>
+                    </div>
+                </div>
+                <div class="px-3 pt-2 rubik">
+                    <a class="judul-gambar-uploaded-by-users-home text-decoration-none" style="color: #444" href="">ini judul gambar</a>
+                    <hr class="mt-2 mb-1">
+                </div>
+                <div class="description-image px-3 py-2 d-flex align-items-center justify-content-between">
+                    <div class="account d-flex align-items-center">
+                        <a href="">
+
+                        
+                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        </a>
+                        <span class="quicksand"><a href="">Tomy Wibowo</a></span>
+                    </div>
+                    <div class="reaction d-flex" style="font-size: 14px;">
+                        <div class="comment mx-1 text-primary">
+                            <i class="fas fa-comment"></i> 20
+                        </div>
+                        <div class="like mx-1 text-danger">
+                            <i class="fas fa-heart"></i> 29
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <%- include('./../partials/footer'); -%>
