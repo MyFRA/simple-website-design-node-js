@@ -1,5 +1,286 @@
 /* Utility */
 
+
+.shadow-xs {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-inner {
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.shadow-outline {
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.shadow-none {
+  box-shadow: none;
+}
+
+.rounded-none {
+  border-radius: 0;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-t-none {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.rounded-r-none {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.rounded-b-none {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.rounded-l-none {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.rounded-t-sm {
+  border-top-left-radius: 0.125rem;
+  border-top-right-radius: 0.125rem;
+}
+
+.rounded-r-sm {
+  border-top-right-radius: 0.125rem;
+  border-bottom-right-radius: 0.125rem;
+}
+
+.rounded-b-sm {
+  border-bottom-right-radius: 0.125rem;
+  border-bottom-left-radius: 0.125rem;
+}
+
+.rounded-l-sm {
+  border-top-left-radius: 0.125rem;
+  border-bottom-left-radius: 0.125rem;
+}
+
+.rounded-t {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.rounded-r {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.rounded-b {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-l {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-t-md {
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
+.rounded-r-md {
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+
+.rounded-b-md {
+  border-bottom-right-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.rounded-l-md {
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.rounded-r-lg {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.rounded-b-lg {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-l-lg {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-t-full {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.rounded-r-full {
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+
+.rounded-b-full {
+  border-bottom-right-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+.rounded-l-full {
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+.rounded-tl-none {
+  border-top-left-radius: 0;
+}
+
+.rounded-tr-none {
+  border-top-right-radius: 0;
+}
+
+.rounded-br-none {
+  border-bottom-right-radius: 0;
+}
+
+.rounded-bl-none {
+  border-bottom-left-radius: 0;
+}
+
+.rounded-tl-sm {
+  border-top-left-radius: 0.125rem;
+}
+
+.rounded-tr-sm {
+  border-top-right-radius: 0.125rem;
+}
+
+.rounded-br-sm {
+  border-bottom-right-radius: 0.125rem;
+}
+
+.rounded-bl-sm {
+  border-bottom-left-radius: 0.125rem;
+}
+
+.rounded-tl {
+  border-top-left-radius: 0.25rem;
+}
+
+.rounded-tr {
+  border-top-right-radius: 0.25rem;
+}
+
+.rounded-br {
+  border-bottom-right-radius: 0.25rem;
+}
+
+.rounded-bl {
+  border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-tl-md {
+  border-top-left-radius: 0.375rem;
+}
+
+.rounded-tr-md {
+  border-top-right-radius: 0.375rem;
+}
+
+.rounded-br-md {
+  border-bottom-right-radius: 0.375rem;
+}
+
+.rounded-bl-md {
+  border-bottom-left-radius: 0.375rem;
+}
+
+.rounded-tl-lg {
+  border-top-left-radius: 0.5rem;
+}
+
+.rounded-tr-lg {
+  border-top-right-radius: 0.5rem;
+}
+
+.rounded-br-lg {
+  border-bottom-right-radius: 0.5rem;
+}
+
+.rounded-bl-lg {
+  border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-tl-full {
+  border-top-left-radius: 9999px;
+}
+
+.rounded-tr-full {
+  border-top-right-radius: 9999px;
+}
+
+.rounded-br-full {
+  border-bottom-right-radius: 9999px;
+}
+
+.rounded-bl-full {
+  border-bottom-left-radius: 9999px;
+}
+
 .quicksand {
   font-family: 'Quicksand', sans-serif;
 }
@@ -7,6 +288,115 @@
   font-family: 'Baloo Da 2', cursive;
 }
 
+.text-555 {
+  color: #555 !important;
+}
+
+.font-13 {
+  font-size: 13px !important;
+}
+
+.font-14 {
+  font-size: 14px !important;
+}
+
+.font-15 {
+  font-size: 15px !important;
+}
+
+.font-16 {
+  font-size: 16px !important;
+}
+
+.font-17 {
+  font-size: 17px !important;
+}
+
+.font-18 {
+  font-size: 18px !important;
+}
+
+.font-19 {
+  font-size: 19px !important;
+}
+
+.font-20 {
+  font-size: 20px !important;
+}
+
+.font-21 {
+  font-size: 21px !important;
+}
+
+.font-22 {
+  font-size: 22px !important;
+}
+
+.font-23 {
+  font-size: 23px !important;
+}
+
+.font-24 {
+  font-size: 24px !important;
+}
+
+.font-25 {
+  font-size: 25px !important;
+}
+
+@media screen and (min-width: 993px) {
+  .font-lg-13 {
+    font-size: 13px !important;
+  }
+  
+  .font-lg-14 {
+    font-size: 14px !important;
+  }
+  
+  .font-lg-15 {
+    font-size: 15px !important;
+  }
+  
+  .font-lg-16 {
+    font-size: 16px !important;
+  }
+  
+  .font-lg-17 {
+    font-size: 17px !important;
+  }
+  
+  .font-lg-18 {
+    font-size: 18px !important;
+  }
+  
+  .font-lg-19 {
+    font-size: 19px !important;
+  }
+  
+  .font-lg-20 {
+    font-size: 20px !important;
+  }
+  
+  .font-lg-21 {
+    font-size: 21px !important;
+  }
+  
+  .font-lg-22 {
+    font-size: 22px !important;
+  }
+  
+  .font-lg-23 {
+    font-size: 23px !important;
+  }
+  
+  .font-lg-24 {
+    font-size: 24px !important;
+  }
+  
+  .font-lg-25 {
+    font-size: 25px !important;
+  }
+}
 /* End of utility */
 
 
@@ -14,7 +404,7 @@
 /* Navbar */
 
 .navbar-brand {
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
 }
 
 .nav-link-navbar div {
@@ -28,17 +418,17 @@
 
 @media screen and (max-width: 992px) {
   .navbar-brand {
-    font-size: 4rem;
+    /* font-size: 4rem; */
   }
 
   button.navbar-toggler {
-    transform: scale(2);
+    /* transform: scale(2); */
   }
 
   .nav-link-navbar,
   .nav-link-navbar div {
-    font-size: 2.5rem;
-    margin: 0.5rem 0;
+    /* font-size: 2.5rem; */
+    /* margin: 0.5rem 0; */
   }
 
   .nav-link-navbar:hover {
@@ -58,7 +448,7 @@
 
 @media screen and (max-width: 992px) {
   .footer {
-    font-size: 30px;
+    font-size: 13px;
   }
 
 }
@@ -74,7 +464,7 @@
   /* Landing Hero */
 
   .landing-hero {
-    height: 100vh;
+    height: 95vh;
   }
   
   .landing-hero .title-hero{
@@ -94,18 +484,20 @@
   @media screen and (max-width: 992px) {
     .landing-hero {
       align-content: flex-start !important;
+      height: initial;
     }
   
     .landing-hero .title-hero h1{
-      margin-top: -3rem;
-      font-size: 5rem;
+      /* margin-top: rem; */
+      font-size: 2rem;
+      /* font-size: 5rem; */
       text-align: center;
-      line-height: 90px;
+      /* line-height: 90px; */
     }
   
     .landing-hero .title-hero p{
       text-align: center;
-      font-size: 3rem;
+      /* font-size: 3rem; */
     }
   
     .landing-hero .title-hero div {
@@ -114,10 +506,10 @@
   
     .landing-hero .title-hero div a{
       text-align: center !important;
-      font-size: 3.5rem;
-      padding: 2rem 4rem;
-      margin: 2rem 0;
-      border-radius: 20px !important;
+      /* font-size: 3.5rem; */
+      /* padding: 2rem 4rem; */
+      /* margin: 2rem 0; */
+      border-radius: 10px !important;
     }
   
   
@@ -197,29 +589,30 @@
 
   @media screen and (max-width: 992px) {
     .card-section-category {
-      padding: 1rem 0;
+      padding: 1rem;
+      margin-top: 3rem;
     }
 
     section.category button {
-      font-size: 30px;
+      font-size: 13px;
     }
 
     section.category .dropdown-menu {
-      margin-top: 1rem;
+      /* margin-top: 1rem; */
     }
 
     section.category .dropdown-menu a{
-      font-size: 30px;
-      padding: 0.5rem 5rem;
+      /* font-size: 30px; */
+      /* padding: 0.5rem 5rem; */
     }
 
     section.category .wrap-list-by-category ul li{
-      margin: 0 1rem;
+      margin: 0 .5rem;
     }
 
     section.category .wrap-list-by-category ul li a{
-      font-size: 35px;
-      line-height: 40px;
+      font-size: 13px;
+      /* line-height: 40px; */
     }
   }
 
@@ -243,15 +636,15 @@
     .search-container div input {
       border: 1px solid #aaa;
       border-radius: 200px;
-      width: 300px;
-      height: 60px;
-      padding: 2px 10px;
+      /* width: 300px; */
+      /* height: 60px; */
+      /* padding: 2px 10px; */
       color: #555;
-      font-size: 25px;
+      /* font-size: 25px; */
     }
 
     .search-container div button {
-      font-size: 33px;
+      /* font-size: 33px; */
     }
   }
 
@@ -344,33 +737,33 @@
 
   @media screen and (max-width: 992px) {
     .judul-gambar-uploaded-by-users-home {
-      font-size: 40px;
+      /* font-size: 40px; */
     }
 
     section.content .card-content-wrapper .image {
-      height: 500px;
+      /* height: 500px; */
     }
 
     section.content .card-content-wrapper .image div .images-uploaded-by-users {
-      height: 500px;
+      /* height: 500px; */
     }
 
     section.content .card-content-wrapper .description-image .account img {
-      width: 60px;
+      /* width: 60px; */
       border-radius:5px;
     }
   
     section.content .card-content-wrapper .description-image .account span {
-      font-size: 25px;
+      /* font-size: 25px; */
       margin-left: 0.4rem;
     }
 
     section.content .card-content-wrapper .description-image .reaction {
-      font-size: 40px !important;
+      /* font-size: 40px !important; */
     }
 
     section.content .card-content-wrapper .description-image .reaction .comment{
-      margin: 0 1.5rem !important;
+      /* margin: 0 1.5rem !important; */
     }
 
   }

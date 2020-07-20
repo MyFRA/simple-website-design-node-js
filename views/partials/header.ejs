@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta id="meta" name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/plugins/fontawesome/css/all.css">
     <link rel="stylesheet" href="/plugins/bootstrap-4.2.1-dist/css/bootstrap.min.css">
     <link rel='stylesheet' href='/css/style.css' />
@@ -21,14 +22,17 @@
             <a class="nav-link nav-link-navbar mx-3 active" aria-current="page" href="#">Home</a>
             <a class="nav-link nav-link-navbar mx-3" href="#">Features</a>
             <a class="nav-link nav-link-navbar mx-3" href="#">Pricing</a>
-            <a class="nav-link nav-link-navbar mx-3">
-              <div class="btn btn-danger new-button">
-                <i class="fas fa-sign-in-alt mr-1"></i> Sign Up
-              </div>
+            <a class="nav-link nav-link-navbar">
+                <a href="/user/login" class="btn btn-primary py-lg-2 px-lg-4  text-white mr-lg-2">
+                    <i class="fas fa-user mr-1"></i> Masuk
+                </a>
+                <a href="/user/register" class="btn btn-danger mt-2 mt-lg-0 py-lg-2 px-lg-4 text-white new-button">
+                    <i class="fas fa-sign-in-alt mr-1"></i> Daftar
+                </a>
             </a>
           </div>
         </div>
       </div>
     </nav>
  
-    <div class="px-6">
+    <div class="px-6" style="background: #fff">

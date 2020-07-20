@@ -1,0 +1,26 @@
+<%- include('./../partials/header') %>  
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card py-5 px-5 shadow-lg rounded-lg border-0">
+                <form>
+                    <h1 class="text-center mb-5 quicksand">Masuk</h1>
+                    <div class="form-group">
+                      <label class="text-555 font-weight-bold quicksand" for="username">username / email</label>
+                      <input type="username" name="username" class="form-control" id="username" placeholder="username / email" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                      <label class="text-555 font-weight-bold quicksand" for="password">kata sandi</label>
+                      <input type="password" name="username" class="form-control" id="password" placeholder="kata sandi" autocomplete="off">
+                      <div class="text-right mt-1 mr-1"> 
+                        <a href="" class="text-right font-15">Lupa kata sandi</a>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 font-19 mt-2">Masuk</button>
+                </form>
+                <span class="text-center text-555 font-13 font-lg-16 mt-2">Belum mempunyai akun ? <a href="/user/register">Daftar</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('./../partials/footer') %>  

@@ -1,0 +1,35 @@
+<%- include('./../partials/header') %>  
+<div class="container-fluid my-5" style="min-height: 90vh;">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card py-5 px-5 shadow-lg rounded-lg border-0">
+                <form>
+                    <h1 class="text-center mb-5 quicksand">Registrasi</h1>
+                    <div class="form-group">
+                        <label class="text-555 font-weight-bold quicksand" for="nama">nama</label>
+                        <input type="nama" name="nama" class="form-control" id="nama" placeholder="nama" autocomplete="off">
+                      </div>
+                    <div class="form-group">
+                      <label class="text-555 font-weight-bold quicksand" for="email">email</label>
+                      <input type="email" name="email" class="form-control" id="email" placeholder="email" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                      <label class="text-555 font-weight-bold quicksand" for="username">username</label>
+                      <input type="username" name="username" class="form-control" id="username" placeholder="username" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-555 font-weight-bold quicksand" for="password">kata sandi</label>
+                        <input type="password" name="username" class="form-control" id="password" placeholder="kata sandi" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label class="text-555 font-weight-bold quicksand" for="password">ulangi kata sandi</label>
+                        <input type="password" name="username" class="form-control" id="password" placeholder="ulangi kata sandi" autocomplete="off">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 font-19 mt-2">Daftar</button>
+                </form>
+                <span class="text-center text-555 font-13 font-lg-16 mt-2">Sudah mempunyai akun ? <a href="/user/login">Masuk</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('./../partials/footer') %>  
