@@ -3,27 +3,49 @@
     <div class="row">
         <div class="col-lg-6 offset-lg-3">
             <div class="card py-5 px-5 shadow-lg rounded-lg border-0">
-                <form>
+                <form method="POST" action="">
                     <h1 class="text-center mb-5 quicksand">Registrasi</h1>
                     <div class="form-group">
                         <label class="text-555 font-weight-bold quicksand" for="nama">nama</label>
-                        <input type="nama" name="nama" class="form-control" id="nama" placeholder="nama" autocomplete="off">
-                      </div>
+                        <input type="nama" name="nama" class="form-control <% if (messages.nama) { %> is-invalid <% } %>" id="nama" placeholder="nama" autocomplete="off" value="<% if(messages.oldnama) {%><%=messages.oldnama%><%} %>">
+                        <% if (messages.nama) { %> 
+                            <div class="invalid-feedback">
+                                <%= messages.nama %> 
+                            </div>
+                        <% } %>
+                    </div>
+                      
                     <div class="form-group">
-                      <label class="text-555 font-weight-bold quicksand" for="email">email</label>
-                      <input type="email" name="email" class="form-control" id="email" placeholder="email" autocomplete="off">
+                        <label class="text-555 font-weight-bold quicksand" for="email">email</label>
+                        <input type="email" name="email" class="form-control <% if (messages.email) { %> is-invalid <% } %>" id="email" placeholder="email" autocomplete="off" value="<% if(messages.oldemail) {%><%=messages.oldemail%><%} %>">
+                        <% if (messages.email) { %> 
+                            <div class="invalid-feedback">
+                                <%= messages.email %> 
+                            </div>
+                        <% } %>
+                        
                     </div>
                     <div class="form-group">
-                      <label class="text-555 font-weight-bold quicksand" for="username">username</label>
-                      <input type="username" name="username" class="form-control" id="username" placeholder="username" autocomplete="off">
+                        <label class="text-555 font-weight-bold quicksand" for="username">username</label>
+                        <input type="username" name="username" class="form-control <% if (messages.username) { %> is-invalid <% } %>" id="username" placeholder="username" autocomplete="off" value="<% if(messages.oldusername) {%><%=messages.oldusername%><%} %>">
+                        <% if (messages.username) { %> 
+                            <div class="invalid-feedback">
+                                <%= messages.username %> 
+                            </div>
+                        <% } %>
                     </div>
                     <div class="form-group">
                         <label class="text-555 font-weight-bold quicksand" for="password">kata sandi</label>
-                        <input type="password" name="username" class="form-control" id="password" placeholder="kata sandi" autocomplete="off">
+                        <input type="password" name="password" class="form-control <% if (messages.password) { %> is-invalid <% } %>" id="password" placeholder="kata sandi" autocomplete="off" value="<% if(messages.oldpassword) {%><%=messages.oldpassword%><%} %>">
+                        <% if (messages.password) { %> 
+                            <div class="invalid-feedback">
+                                <%= messages.password %> 
+                            </div>
+                        <% } %>
                     </div>
                     <div class="form-group">
                         <label class="text-555 font-weight-bold quicksand" for="password">ulangi kata sandi</label>
-                        <input type="password" name="username" class="form-control" id="password" placeholder="ulangi kata sandi" autocomplete="off">
+                        <input type="password" name="password_confirmation" class="form-control" id="password" placeholder="ulangi kata sandi" autocomplete="off">
                     </div>
                     <button type="submit" class="btn btn-primary w-100 font-19 mt-2">Daftar</button>
                 </form>

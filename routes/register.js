@@ -8,7 +8,8 @@ const RegisterController = require('./../controllers/Auth/RegisterController');
 const Route = express.Router();
 
 // Route
-Route.get('/', RegisterController.index);
+Route.get('/', RegisterController.show);
+Route.post('/', RegisterController.register);
 
 // Export
 module.exports = Route;
