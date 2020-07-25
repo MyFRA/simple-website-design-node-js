@@ -4,7 +4,11 @@ const FlashOldInput = require('./../../helpers/FlashOldInput');
 
 const LoginController = {
     index: function(req, res) {
-        res.render('auth/login', {title: 'Login | MyDesign'});
+        const data = {
+            title: 'Login | MyDesign',
+            auth: req.session.auth,
+        }
+        res.render('auth/login', data);
     },
 
     login: function(req, res) {

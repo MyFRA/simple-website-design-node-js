@@ -2,10 +2,14 @@
 <div class="landing-hero row mx-0 align-content-center justify-content-center">
     <div class="title-hero col-lg-6 order-2 order-lg-1 d-flex flex-column container pl-lg-5 justify-content-center">
         <h1 class="font-weight-bold display-4 pl-lg-3 ml-lg-5 quicksand">Tunjukan Karyamu, Kepada Semua Orang</h1>
-        <p class="ml-lg-5 mt-3 pl-lg-3 text-muted">Bergabunglah bersama kami dengan 598 desainer lainya.</p>
-        <div class="ml-lg-5 mt-3 pl-lg-3 ">
-            <a class="btn btn-danger btn-lg new-button " href=""><i class="fas fa-sign-in-alt mr-2"></i> Gabung</a>
-        </div>
+        <% if (auth) { %>
+            <p class="ml-lg-5 mt-3 pl-lg-3 text-muted">Ayo, sekarang juga upload dan tunjukan karya terbaikmu disini.</p>
+        <% } else { %>
+            <p class="ml-lg-5 mt-3 pl-lg-3 text-muted">Bergabunglah bersama kami dengan 598 desainer lainya.</p>
+            <div class="ml-lg-5 mt-3 pl-lg-3 ">
+                <a class="btn btn-danger btn-lg new-button " href=""><i class="fas fa-sign-in-alt mr-2"></i> Gabung</a>
+            </div>
+        <% } %>
     </div>
     <div class="image-container-hero col-lg-6 order-1 order-lg-2">
         <img class="" src="./images/wfh_1.svg" alt="">

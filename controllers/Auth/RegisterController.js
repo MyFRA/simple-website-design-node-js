@@ -5,7 +5,11 @@ const FlashOldInput = require('./../../helpers/FlashOldInput');
 
 const RegisterController = {
     show: function(req, res) {
-        res.render('auth/register', {title: 'Register | MyDesign'});
+        const data = {
+            title: 'Register | MyDesign',
+            auth: req.session.auth,
+        }
+        res.render('auth/register', data);
     },
 
     register: function(req, res) {

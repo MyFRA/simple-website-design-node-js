@@ -415,6 +415,16 @@
   background-color: rgb(235, 23, 122);
 }
 
+div.nav-link .dropdown-navbar div.dropdown-menu-navbar{
+  border: none !important;
+
+}
+
+.collapse .nav-link .dropdown-navbar div.dropdown-menu-navbar a:hover{
+  color: #F14D9A !important;
+}
+
+
 
 @media screen and (max-width: 992px) {
   .navbar-brand {

@@ -1,7 +1,11 @@
 // Landing Page
 const HomeController = {
     index: function(req, res) {
-        res.render('pages/home', {title: 'MyDesign | Tunjukan karyamu, kepada dunia'});
+        const data = {
+            title: 'MyDesign | Tunjukan karyamu, kepada dunia',
+            auth: req.session.auth,
+        }
+        res.render('pages/home', data);
     }
 }
 
