@@ -3,8 +3,10 @@ const bcrypt = require('bcrypt');
 
 // Require helpers
 const Validator = require('./Validator');
-const User = require('./../models/User');
 const GetObjError = require('./GetObjError');
+
+// Require model
+const User = require('./../models/User');
 
 
 const RegisterHelper = {
@@ -33,7 +35,7 @@ const RegisterHelper = {
             // Validation if the email is already used
             await User.findByColumn('email', req.body.email)
                 .then((results) => {
-                    if(results.length > 0) {
+                    if(results) {
                         RegisterHelper.pass = false;
                         const objError = new GetObjError(req, 'email', 'email sudah digunakan');
                         reject(objError);
@@ -47,7 +49,7 @@ const RegisterHelper = {
             // Validation if the username is already used
             await User.findByColumn('username', req.body.username)
                 .then((results) => {
-                    if(results.length > 0) {
+                    if(results) {
                         RegisterHelper.pass = false;
                         const objError = new GetObjError(req, 'username', 'username sudah digunakan');
                         reject(objError);

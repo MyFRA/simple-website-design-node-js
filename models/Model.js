@@ -41,12 +41,12 @@ class Model {
         return new Promise((resolve, reject) => {
             conn.then((db) => {
                 (async function(table) {
-                    await db.query(`SELECT * FROM ${table} WHERE ${column} = '${value}'`, (err, res) => {
+                    await db.query(`SELECT * FROM ${table} WHERE ${column} = '${value}' LIMIT 1`, (err, res) => {
                         if(err) {
                             reject(err);
                             throw err;
                         }
-                        resolve(res);
+                        resolve(res[0]);
                     });
                 })(this.table);
             });
