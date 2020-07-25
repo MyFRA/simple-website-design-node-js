@@ -14,7 +14,8 @@ const db = require('./config/config');
 const home = require('./routes/home');
 const login = require('./routes/login');
 const register = require('./routes/register');
-
+const myprofile = require('./routes/myprofile');
+const upload_design = require('./routes/upload_design');
 
 // Initialization app
 const app = express();
@@ -42,6 +43,8 @@ app.use(logger('dev'));
 app.use('/', home);
 app.use('/user/login', login);
 app.use('/user/register', register);
+app.use('/user/myprofile', myprofile);
+app.use('/user/upload-design', upload_design);
 
 // Set static files
 app.use(express.static(path.join(__dirname, 'public')));

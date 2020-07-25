@@ -1,50 +1,54 @@
-<%- include('./../partials/header'); -%>
-<div class="landing-hero row mx-0 align-content-center justify-content-center">
-    <div class="title-hero col-lg-6 order-2 order-lg-1 d-flex flex-column container pl-lg-5 justify-content-center">
-        <h1 class="font-weight-bold display-4 pl-lg-3 ml-lg-5 quicksand">Tunjukan Karyamu, Kepada Semua Orang</h1>
-        <% if (auth) { %>
-            <p class="ml-lg-5 mt-3 pl-lg-3 text-muted">Ayo, sekarang juga upload dan tunjukan karya terbaikmu disini.</p>
-        <% } else { %>
-            <p class="ml-lg-5 mt-3 pl-lg-3 text-muted">Bergabunglah bersama kami dengan 598 desainer lainya.</p>
-            <div class="ml-lg-5 mt-3 pl-lg-3 ">
-                <a class="btn btn-danger btn-lg new-button " href=""><i class="fa fa-sign-out mr-1"></i> Gabung</a>
+<%- include('./../partials/header.ejs') %>
+<section class="profile-account-wrapper">
+    <div class="container">
+        <div class="profile-account">
+            <div class="photo-profile-wrapper">
+                <div>
+                    <img class="rounded-full" src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                </div>
             </div>
-        <% } %>
-    </div>
-    <div class="image-container-hero col-lg-6 order-1 order-lg-2">
-        <img class="" src="./images/wfh_1.svg" alt="">
-    </div>
-</div>
-
-
-<div class="card p-0 py-lg-1 card-section-category">
-    <section class="category px-lg-5 py-lg-1 mx-lg-5 d-flex justify-content-between align-items-center">
-        <div class="btn-group mr-lg-5 pl-3 pl-lg-4 d-inline-block">
-            <button class=" btn dropdown-toggle px-lg-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Terbaru</button>
-
-            <div class="dropdown-menu mt-lg-2">
-                <a class="dropdown-item text-muted active-dropdown-kategori" href="#">Terbaru</a>
-                <a class="dropdown-item text-muted" href="#">Populer</a>
+            <div class="information-profile-wrapper">
+                <div class="information-wrapper poppins text-333">
+                    <h2 class="name">Nadifa Izla Pramuasti</h2>
+                    <h3 class="username font-22 mt-2 text-primary"><a href="">@nadifa.izla</a></h3>
+                    <div class="post-follow my-3">
+                        <span class="ml-0"><b>21</b> posts</span>
+                        <span><b>78</b> pengikut</span>
+                        <span><b>90</b> mengikuti</span>
+                    </div>
+                    <div class="quote">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur fugit exercitationem reprehenderit, unde molestias ipsam a quam sit maxime repudiandae. Velit recusandae consequatur impedit hic non labore, facilis odio in.
+                    </div>
+                    <div class="btn btn-primary tulisan-upload-file-upload-design btn-sm mt-3" style="margin-left: 0 !important;">
+                        <a class="text-white text-decoration-none" href=""><i class="fa fa-edit mr-1"></i> Edit Profil</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="d-inline-block wrap-list-by-category mt-3 mt-lg-0">
-            <ul class="d-flex list-unstyled align-items-center">
-                <li class="mt-lg-3"><a class="active" href="">Semua</a></li>
-                <li class="mt-lg-3"><a href="">Anime</a></li>
-                <li class="mt-lg-3"><a href="">Ilustrasi</a></li>
-                <li class="mt-lg-3"><a href="">Web Desain</a></li>
-            </ul>
-        </div>
-    </section>
-</div>
-
-<!-- <div class="px-lg-4 pt-lg-4 search-container">
-    <div class="d-flex align-items-center justify-content-end">
-        <input class="mx-lg-2 rounded" type="text" name="keyword" id="">
-        <button class="btn btn-sm btn-danger new-button" type="submit">Cari</button>
     </div>
-</div> -->
+</section>
 
+
+<div class="mt-4">
+    <div class="container">
+        <h2 class="text-666 posts-tulisan">#Posts</h2>
+    </div>
+    <div class="card p-0 py-lg-1 card-section-category mt-2 mt-lg-3">
+        <section class="category px-lg-5 py-lg-1 mx-lg-5 d-flex justify-content-between align-items-center">
+            <div class="btn-group mr-lg-5 pl-3 pl-lg-4 d-inline-block py-1">
+                <button class=" btn dropdown-toggle px-lg-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Terbaru</button>
+                <span class="ml-2 file-input btn btn-danger new-button rounded btn-file tulisan-upload-file-upload-design">
+                    <i class="fa fa-upload"></i> Upload Design<input type="file" id="upload-design" name="design">
+                </span>
+
+                <div class="dropdown-menu mt-lg-2">
+                    <a class="dropdown-item text-muted active-dropdown-kategori" href="#">Terbaru</a>
+                    <a class="dropdown-item text-muted" href="#">Populer</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
 
 <section id="content-wrapper-design" class="content my-4 px-4 px-lg-5">
     <div class="row row-content-wrapper-design">
@@ -52,7 +56,7 @@
             <div class="card-content-wrapper">
                 <div class="image">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/wfh_1.svg');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/wfh_1.svg');"></div>
                     </div>
                 </div>
 
@@ -65,7 +69,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -84,8 +88,8 @@
             <div class="card-content-wrapper">
                 <div class="image overflow-hidden">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/wallpaperflare.com_wallpaper.jpg');"></div>
-                        {{!-- <img id="imageLikedByUsers" class="images-uploaded-by-users" src="./images/wallpaperflare.com_wallpaper.jpg" alt=""      > --}}
+                        <div class="images-uploaded-by-users" style="background: url('/images/wallpaperflare.com_wallpaper.jpg');"></div>
+                        {{!-- <img id="imageLikedByUsers" class="images-uploaded-by-users" src="/images/wallpaperflare.com_wallpaper.jpg" alt=""      > --}}
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -97,7 +101,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -116,7 +120,7 @@
             <div class="card-content-wrapper">
                 <div class="image">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/vocaloid_series_websiteprofile_800px.jpg');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/vocaloid_series_websiteprofile_800px.jpg');"></div>
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -128,7 +132,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -147,7 +151,7 @@
             <div class="card-content-wrapper">
                 <div class="image overflow-hidden">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/PngItem_5135373.png');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/PngItem_5135373.png');"></div>
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -159,7 +163,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -178,7 +182,7 @@
             <div class="card-content-wrapper">
                 <div class="image overflow-hidden">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/Daco_2400672.png');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/Daco_2400672.png');"></div>
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -190,7 +194,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -209,7 +213,7 @@
             <div class="card-content-wrapper">
                 <div class="image overflow-hidden">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/863080.png');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/863080.png');"></div>
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -221,7 +225,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -240,7 +244,7 @@
             <div class="card-content-wrapper">
                 <div class="image overflow-hidden">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/714077.png');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/714077.png');"></div>
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -252,7 +256,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -271,7 +275,7 @@
             <div class="card-content-wrapper">
                 <div class="image overflow-hidden">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/713297.png');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/713297.png');"></div>
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -283,7 +287,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -302,7 +306,7 @@
             <div class="card-content-wrapper">
                 <div class="image overflow-hidden">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/5abacc01d0dab1525f22df0b7d6f6982.png');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/5abacc01d0dab1525f22df0b7d6f6982.png');"></div>
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -314,7 +318,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -333,7 +337,7 @@
             <div class="card-content-wrapper">
                 <div class="image overflow-hidden">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/wallpaperflare.com_wallpaper.jpg');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/wallpaperflare.com_wallpaper.jpg');"></div>
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -345,7 +349,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -364,7 +368,7 @@
             <div class="card-content-wrapper">
                 <div class="image overflow-hidden">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/vocaloid_series_websiteprofile_800px.jpg');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/vocaloid_series_websiteprofile_800px.jpg');"></div>
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -376,7 +380,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -395,7 +399,7 @@
             <div class="card-content-wrapper">
                 <div class="image">
                     <div class="px-5">
-                        <div class="images-uploaded-by-users" style="background: url('./images/PngItem_5135373.png');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/PngItem_5135373.png');"></div>
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -407,7 +411,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -426,7 +430,7 @@
             <div class="card-content-wrapper">
                 <div class="image overflow-hidden">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/714077.png');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/714077.png');"></div>
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -438,7 +442,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -457,7 +461,7 @@
             <div class="card-content-wrapper">
                 <div class="image overflow-hidden">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/713297.png');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/713297.png');"></div>
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -469,7 +473,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -488,7 +492,7 @@
             <div class="card-content-wrapper">
                 <div class="image overflow-hidden">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/5abacc01d0dab1525f22df0b7d6f6982.png');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/5abacc01d0dab1525f22df0b7d6f6982.png');"></div>
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -500,7 +504,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -519,7 +523,7 @@
             <div class="card-content-wrapper">
                 <div class="image overflow-hidden">
                     <div>
-                        <div class="images-uploaded-by-users" style="background: url('./images/wallpaperflare.com_wallpaper.jpg');"></div>
+                        <div class="images-uploaded-by-users" style="background: url('/images/wallpaperflare.com_wallpaper.jpg');"></div>
                     </div>
                 </div>
                 <div class="px-3 pt-2 rubik">
@@ -531,7 +535,7 @@
                         <a href="">
 
                         
-                        <img src="./images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
+                        <img src="/images/Anime-Girl-Icon-erikasakura0812-38624606-500-500.jpg" alt="">
                         </a>
                         <span class="quicksand"><a href="">Tomy Wibowo</a></span>
                     </div>
@@ -549,4 +553,7 @@
     </div>
 </section>
 
-<%- include('./../partials/footer'); -%>
+
+<form id="form-upload-design" action="" method=""></form>
+
+<%- include('./../partials/footer.ejs') %> 

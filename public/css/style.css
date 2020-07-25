@@ -1,5 +1,33 @@
 /* Utility */
-
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: red;
+  cursor: inherit;
+  display: block;
+}
+.file-input-label {
+  padding: 0px 10px;
+  display: table-cell;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
+}
 
 .shadow-xs {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
@@ -284,12 +312,77 @@
 .quicksand {
   font-family: 'Quicksand', sans-serif;
 }
+
 .rubik {
   font-family: 'Baloo Da 2', cursive;
 }
 
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.text-000 {
+  color: #000 !important;
+}
+
+.text-111 {
+  color: #111 !important;
+}
+
+.text-222 {
+  color: #222 !important;
+}
+
+.text-333 {
+  color: #333 !important;
+}
+
+.text-444 {
+  color: #444 !important;
+}
+
 .text-555 {
   color: #555 !important;
+}
+
+.text-666 {
+  color: #666 !important;
+}
+
+.text-777 {
+  color: #777 !important;
+}
+
+.text-888 {
+  color: #888 !important;
+}
+
+.text-999 {
+  color: #999 !important;
+}
+
+.text-aaa {
+  color: #aaa !important;
+}
+
+.text-bbb {
+  color: #bbb !important;
+}
+
+.text-ccc {
+  color: #ccc !important;
+}
+
+.text-ddd {
+  color: #ddd !important;
+}
+
+.text-eee {
+  color: #eee !important;
+}
+
+.text-fff {
+  color: #fff !important;
 }
 
 .font-13 {
@@ -783,6 +876,105 @@ div.nav-link .dropdown-navbar div.dropdown-menu-navbar{
 
 
 
+  /* MY PROFILE PAGE */
+
+    /* Index */
+      /* Profile Account Wrapper */
+      section.profile-account-wrapper {
+        margin-top: 2rem;
+      }
+
+      section.profile-account-wrapper .profile-account{
+        display: flex;
+      }
+
+      section.profile-account-wrapper .profile-account .photo-profile-wrapper{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      section.profile-account-wrapper .profile-account .photo-profile-wrapper div{
+        padding: 1rem;
+      }
+
+      section.profile-account-wrapper .profile-account .photo-profile-wrapper div img{
+        width: 275px;
+        height: 275px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+
+      section.profile-account-wrapper .profile-account .information-profile-wrapper{
+        flex: 2;
+      }
+
+      section.profile-account-wrapper .profile-account .information-profile-wrapper .information-wrapper{
+        padding: 3rem 1rem 1rem 1rem;
+      }
+
+      section.profile-account-wrapper .profile-account .information-profile-wrapper .information-wrapper div span{
+        margin: 0 1rem;
+      }
+
+
+      @media screen and (max-width: 992px) {
+        section.profile-account-wrapper .profile-account{
+          flex-direction: column;
+        }
+
+        section.profile-account-wrapper .profile-account .photo-profile-wrapper div{
+          padding-bottom: 0rem;
+        }
+
+        section.profile-account-wrapper .profile-account .photo-profile-wrapper div img{
+          width: 175px;
+          height: 175px;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        section.profile-account-wrapper .profile-account .information-profile-wrapper .name{
+          text-align: center;
+          margin-top: -10px;
+          font-size: 1.5rem;
+        }
+
+        section.profile-account-wrapper .profile-account .information-profile-wrapper .username{
+          text-align: center;
+          font-size: 1rem !important;
+        }
+
+        section.profile-account-wrapper .profile-account .information-profile-wrapper .post-follow{
+          margin: 2rem 0 !important;
+          font-size: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        section.profile-account-wrapper .profile-account .information-profile-wrapper .quote{
+          font-size: 14px;
+          text-indent: 15px;
+        }
+
+        .posts-tulisan {
+          font-size: 19px;
+        }
+
+        .tulisan-upload-file-upload-design {
+          font-size: 13px;
+          padding: 5px 10px;
+          margin-left: 5px !important;
+        }
+
+        .tulisan-upload-file-upload-design a{
+          font-size: 13px;
+        }
+
+      }
 
 
 
