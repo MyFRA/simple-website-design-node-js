@@ -15,20 +15,19 @@ const RegisterController = {
     register: function(req, res) {
         // Input Validation
         RegisterHelper.validate(req, res)
+            // Pass validation
+            .then(() => {
+                RegisterHelper.createUser(req);
+                req.flash('success', `Registrasi akun`);
+                res.redirect('/user/login');
+            })
 
-        // Pass validation, let's create an user
-        .then((value) => {
-            RegisterHelper.createUser(req);
-            req.flash('success', 'Registrasi akun');
-            res.redirect('/user/login');
-        }).
-
-        // Failed validation
-        catch((objError) => {
-            FlashOldInput(req);
-            req.flash(objError.result.input, objError.result.message);
-            res.redirect('/user/register');
-        });
+            // Failed validation
+            .catch((objError) => {
+                FlashOldInput(req);
+                req.flash(objError.input, objError.message);
+                res.redirect('/user/register');
+            });
     }
 
 }

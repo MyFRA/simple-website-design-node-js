@@ -15,11 +15,12 @@ const LoginController = {
         LoginHelper.login(req)
             .then((val) => {
                 req.session.auth = {
-                    nama: val.nama,
+                    id: val.id,
+                    name: val.name,
                     email: val.email,
                     username: val.username,
                 }
-                res.redirect('/');
+                res.redirect('/user/myprofile');
             })
             .catch((error) => {
                 FlashOldInput(req);

@@ -3,12 +3,18 @@ let rowDesign = document.querySelector('.row-content-wrapper-design');
 
 
 // Upload Design
-    var file = document.getElementById('upload-design');
-    file.onchange = (e) => {
-        if(file.value != undefined) {
-            const form = document.getElementById('form-upload-design');
-            form.setAttribute('action', '/user/upload-design');
-            form.setAttribute('method', 'POST');
-            form.submit();
-        }
-    }
+    const previewImageUploadDesign = document.getElementById('image-upload-design-preview');
+    const inputFileUploadDesign = document.getElementById('input-file-upload-design')
+
+    // onchange
+    inputFileUploadDesign.addEventListener('change', () => {
+        // var file = this.files[0];
+        const file = inputFileUploadDesign.files[0];
+
+        // object url
+        _PREVIEW_URL = URL.createObjectURL(file);
+
+        // set src of image and show
+        previewImageUploadDesign.setAttribute('src', _PREVIEW_URL);
+        previewImageUploadDesign.style.display = 'inline-block';
+    }) ;

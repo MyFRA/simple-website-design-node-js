@@ -1,14 +1,15 @@
 // Require modules
 const express = require('express');
 
-// Require Controller
-const UploadDesignConstroller = require('./../controllers/UploadDesignController');
+// Requirt controller
+const UploadDesignController = require('./../controllers/UploadDesignController');
 
 // Initialization Route
 const Route = express.Router();
 
 // Route
-Route.post('/', UploadDesignConstroller.upload);
+Route.get('/', UploadDesignController.index);
+Route.post('/', UploadDesignController.upload);
 
-// Export
+
 module.exports = Route;

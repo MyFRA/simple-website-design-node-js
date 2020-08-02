@@ -152,3 +152,415 @@ module.exports = RegisterUser;
         //         })
         //     }
         // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  // // Validate image upload
+            // FilesValidation(files, {
+            //     design: 'extension:jpg, jpeg, png, bmp, gif, svg|maxsize:2500|required:true',
+            // }, (error, result) => {
+            //     if(error) {
+            //         req.body = fields;
+            //         is_error = {
+            //             req: req,
+            //             input: result.input,
+            //             message: result.message
+            //         }
+            //     }
+            // });
+
+            // // Validate input
+            // await AsyncValidator(fields, {
+            //     title: 'required|max:25|unique:Design.title',
+            //     design_category_id: 'required|in:design_categories.id',
+            // }).then((results) => {
+            //     req.body = fields;
+            //         is_error = {
+            //             req: req,
+            //             input: results.input,
+            //             message: results.message
+            //         }
+            // })
+
+            // // Pass validation let's upload and insert to database
+            // const imageName = `${fields.title}-${Math.floor(100000 + Math.random() * 900000)}.${files.design.name.split('.')[files.design.name.split('.').length - 1]}`;
+            // const oldPath   = files.design.path;
+            // const newPath   = path.join(__dirname, './../public/images/designs/' + imageName)
+            // const rawData = fs.readFileSync(oldPath) 
+
+            // // Upload image
+            // fs.writeFile(newPath, rawData, function(err){ 
+            //     if(err) throw err;
+            // });
+
+            // // Insert data to database
+            // Design.create({
+            //     user_id: 101,
+            //     design_category_id: fields.design_category_id,
+            //     title: fields.title,
+            //     design: imageName,
+            // });
+
+            // // Redirect
+            // res.end();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            const FilesValidation = function(files, rules, callback) {
+    
+    // Looping rules object to get each rule (row)
+    for (const key in rules) {
+        if (rules.hasOwnProperty(key)) {
+
+            // Create variable to contain each file
+            const file = files[key];
+
+            // Explode rule (row) to get rule (each rule)
+            const eachRule = rules[key].split('|');
+
+            // Looping eachRule to get rule (one rule)
+            eachRule.forEach( (e)=> {                
+                // Explode each of eachRule variable and create variable to contain rule and values
+                const [rule, values] = e.split(':');
+
+                // Validaton if rule is required
+                if(rule == 'required') {
+                    if(file.size == 0 || file.name == '') {
+                        callback(true, {
+                            input: key, 
+                            message: `${key} tidak boleh kosong`}); 
+                    }
+                }
+
+                // Validation if rule is extension
+                if(rule == 'extension') {
+                    const arrExtensionValid = values.split(',').map((e) => e.replace(' ', ''));
+                    const extensionFile = file.name.split('.')[file.name.split('.').length - 1];
+
+                    if(!arrExtensionValid.includes(extensionFile)) {
+                        return callback(true, {
+                            input: key, 
+                            message: `File yang kamu upload, harus berekstensi ${arrExtensionValid.join(', ')}`
+                        }); 
+                    } 
+                }
+
+                // Validation if rule is max size
+                if(rule == 'maxsize') {
+                    const filesize = file.size;
+                    const maxsize = values;
+
+                    if(filesize > maxsize * 1000) {
+                        return callback(true, {
+                            input: key,
+                            message: `File maksimal berukuran ${maxsize} KB`
+                        }); 
+                    } 
+                }
+            });
+        }
+    }
+
+}
+
+module.exports = FilesValidation;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const AsyncValidator = (req, object) => {
+    return new Promise(async(resolve, reject) => {
+        try {
+            // melakukan perulangan kepada object sehingga mendapatkan masing2 properti
+            for(const key in object) {
+                if (object.hasOwnProperty(key)) {
+        
+                    // mendapatkan rules
+                    const rules = object[key];
+        
+                    // memecah rules dengan delimiter yaitu |
+                    const rulesArr = rules.split('|');
+        
+                    // melakukan perulangan terhadap rules yang dipecah tadi
+                    rulesArr.forEach((rule) => {
+        
+                        // pengecekan kondisi jika required
+                        if(rule == 'required') {
+                            if(req[key] == '') {
+                                resolve({
+                                    input: key,
+                                    message: `${key} tidak boleh kosong`,
+                                })
+                            }
+                        }
+        
+                        // selain dari diatas berarti rule memiliki nilai value
+                        else {
+                            const ruleWithVal = rule.split(':');
+        
+                            // pengecekan kondisi jika ada batas minimal
+                            if(ruleWithVal[0] == 'min') {
+                                if(parseInt(req[key].length) < parseInt(ruleWithVal[1])) {
+                                    resolve({
+                                        input: key,
+                                        message: `${key} minimal ${parseInt(ruleWithVal[1])} karakter`,
+                                    })
+                                }
+                            }
+        
+                            // pengecekan kondisi jika ada batas maksimal
+                            if(ruleWithVal[0] === 'max') {
+                                if(parseInt(req[key].length) > parseInt(ruleWithVal[1])) {
+                                    resolve({
+                                        input: key,
+                                        message: `${key} maksimal ${parseInt(ruleWithVal[1])} karakter`,
+                                    })
+                                }
+                            }
+        
+                            // pengecekan kondisi jika harus sama dengan (equal)
+                            if(ruleWithVal[0] == 'equal') {
+                                if(req[key] != req[ruleWithVal[1]]) {
+                                    resolve({
+                                        input: key,
+                                        message: `${key} dan ${ruleWithVal[1]} tidak cocok`,
+                                    })
+                                }
+                            }
+        
+                            // Pengecekan jika data harus unik
+                            if(ruleWithVal[0] == 'unique') {
+                                const [table, column] = ruleWithVal[1].split('.');
+                                const Model = require('./../models/' + table);
+    
+                                Model.findByColumn(column, req[key])
+                                    .then((results) => {
+                                        if(results) {
+                                            resolve({
+                                                input: key,
+                                                message: `${key} sudah digunakan`, 
+                                            })
+                                        }
+                                    })
+                            }
+                        }
+                    })
+                }
+            }
+        } catch (error) {
+            reject(error);
+        }
+    });
+}
+
+
+module.exports = AsyncValidator;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Fungsi validasi
+const Validator = (req, object, callback, files = null) => {
+
+    // melakukan perulangan kepada object sehingga mendapatkan masing2 properti
+    for(const key in object) {
+        if (object.hasOwnProperty(key)) {
+
+            // mendapatkan rules
+            const rules = object[key];
+
+            // memecah rules dengan delimiter yaitu |
+            const rulesArr = rules.split('|');
+
+            // melakukan perulangan terhadap rules yang dipecah tadi
+            rulesArr.forEach(async (rule) => {
+
+                // pengecekan kondisi jika required
+                if(rule == 'required') {
+                    if(req[key] == '') {
+                        callback(true, {
+                            input: key,
+                            message: `${key} tidak boleh kosong`,
+                        })
+                    }
+                }
+
+                // selain dari diatas berarti rule memiliki nilai value
+                else {
+                    const ruleWithVal = rule.split(':');
+
+                    // pengecekan kondisi jika ada batas minimal
+                    if(ruleWithVal[0] == 'min') {
+                        if(parseInt(req[key].length) < parseInt(ruleWithVal[1])) {
+                            callback(true, {
+                                input: key,
+                                message: `${key} minimal ${parseInt(ruleWithVal[1])} karakter`,
+                            });
+                        }
+                    }
+
+                    // pengecekan kondisi jika ada batas maksimal
+                    if(ruleWithVal[0] === 'max') {
+                        if(parseInt(req[key].length) > parseInt(ruleWithVal[1])) {
+                            callback(true, {
+                                input: key,
+                                message: `${key} maksimal ${parseInt(ruleWithVal[1])} karakter`,
+                            });
+                        }
+                    }
+
+                    // pengecekan kondisi jika harus sama dengan (equal)
+                    if(ruleWithVal[0] == 'equal') {
+                        if(req[key] != req[ruleWithVal[1]]) {
+                            callback(true, {
+                                input: key,
+                                message: `${key} dan ${ruleWithVal[1]} tidak cocok`,
+                            });
+                        }
+                    }
+
+                    // Pengecekan jika data harus unik
+                    if(ruleWithVal[0] == 'unique') {
+                        (async()=> {
+                            const [table, column] = ruleWithVal[1].split('.');
+                            const Model = require('./../models/' + table);
+    
+                            await Model.findByColumn(column, req[key])
+                                .then((results) => {
+                                    if(results) {
+                                        callback(true, {
+                                            input: key,
+                                            message: `${key} sudah digunakan`,
+                                        });
+                                    }
+                                })
+                                .catch((error) => {throw error})
+                        })();
+                    }
+                }
+            })
+        }
+    }
+};
+
+module.exports = Validator;

@@ -1,0 +1,69 @@
+<%- include('./../partials/header.ejs')  %> 
+<section>
+    <form action="" method="POST" enctype="multipart/form-data">
+      <div class="container container-form-upload">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="preview-zone hidden">
+                <div class="box box-solid">
+                    <h2 class="quicksand my-0">UPLOAD DESAIN</h2>
+                  <div class="box-body">
+                    <img class="w-75 rounded-lg w-lg-40 my-4" id="image-upload-design-preview" src="" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="mt-0">
+                <div class="form-group">
+                  <label for="title">Judul</label>
+                  <input type="text" class="form-control <% if(messages.title) {%> is-invalid <%}%>" name="title" id="title" placeholder="masukan judul" value="<%=messages.oldtitle%>">
+                  
+                  <% if (messages.title) { %> 
+                    <div class="invalid-feedback">
+                        <%= messages.title %> 
+                    </div>
+                  <% } %>
+
+                </div>
+                <div class="form-group">
+                  <label for="design_category_id">Kategori</label>
+                  <select class="form-control cursor-pointer <% if(messages.design_category_id) {%> is-invalid <%}%>" name="design_category_id" id="kategori">
+                      <% design_categories.forEach(category => { %>
+                        <option value="<%=category.id%>" <%= (messages.olddesign_category_id == category.id) ? 'selected' : '' %> ><%=category.category%></option>
+                      <% }) %>
+                  </select>
+                  <% if (messages.design_category_id) { %>
+                    <div class="text-danger font-13 mt-1">
+                        <%= messages.design_category_id %> 
+                    </div>
+                  <% } %>
+
+                </div>
+                <div class="dropzone-wrapper <%= (messages.design) ? 'dropzone-wrapper-is-invalid' : ''%>">
+                  <div class="dropzone-desc">
+                      <i class="glyphicon glyphicon-download-alt"></i>
+                      <p>Choose an image file or drag it here.</p>
+                    </div>
+                  <input id="input-file-upload-design" type="file" name="design" class="dropzone">
+                </div>
+                <% if (messages.design) { %>
+                  <div class="text-danger font-13 mt-1">
+                      <%= messages.design[0] %> 
+                  </div>
+                <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-primary pull-right">Upload</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+  
+  <script src="assets/app.js"></script>
+<%- include('./../partials/footer.ejs')  %> 

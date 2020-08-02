@@ -6,11 +6,11 @@
                 <form method="POST" action="">
                     <h1 class="text-center mb-5 quicksand">Registrasi</h1>
                     <div class="form-group">
-                        <label class="text-555 font-weight-bold quicksand" for="nama">nama</label>
-                        <input type="nama" name="nama" class="form-control <% if (messages.nama) { %> is-invalid <% } %>" id="nama" placeholder="nama" autocomplete="off" value="<% if(messages.oldnama) {%><%=messages.oldnama%><%} %>">
-                        <% if (messages.nama) { %> 
+                        <label class="text-555 font-weight-bold quicksand" for="name">nama</label>
+                        <input type="name" name="name" class="form-control <% if (messages.name) { %> is-invalid <% } %>" id="name" placeholder="name" autocomplete="off" value="<% if(messages.oldname) {%><%=messages.oldname%><%} %>">
+                        <% if (messages.name) { %> 
                             <div class="invalid-feedback">
-                                <%= messages.nama %> 
+                                <%= messages.name %> 
                             </div>
                         <% } %>
                     </div>
