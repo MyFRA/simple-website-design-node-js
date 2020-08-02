@@ -3,7 +3,7 @@ const LoginHelper = require('./../../helpers/LoginHelper');
 const FlashOldInput = require('./../../helpers/FlashOldInput');
 
 const LoginController = {
-    index: function(req, res) {
+    show: function(req, res) {
         const data = {
             title: 'Login | MyDesign',
             auth: req.session.auth,

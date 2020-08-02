@@ -5,14 +5,14 @@ const express = require('express');
 const RegisterController = require('./../controllers/Auth/RegisterController');
 
 // Require middlweware
-const RegisterMiddleware = require('./../middleware/LoginSystem');
+const AuthMiddleware = require('./../middleware/AuthMiddleware');
 
 // Initialization route
 const Route = express.Router();
 
 // Route
-Route.get('/', RegisterMiddleware, RegisterController.show);
-Route.post('/', RegisterMiddleware, RegisterController.register);
+Route.get('/', AuthMiddleware, RegisterController.show);
+Route.post('/', AuthMiddleware, RegisterController.register);
 
 // Export
 module.exports = Route;
