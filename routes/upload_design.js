@@ -8,6 +8,7 @@ const UploadDesignConstroller = require('./../controllers/UploadDesignController
 const Route = express.Router();
 
 // Route
+Route.get('/', UploadDesignConstroller.index);
 Route.post('/', UploadDesignConstroller.upload);
 
 // Export

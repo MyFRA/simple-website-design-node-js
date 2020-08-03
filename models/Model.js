@@ -6,6 +6,23 @@ class Model {
     // Table name, obtained from child class
     table;
 
+
+    // Get method
+    get() {
+        return new Promise((resolve, reject) => {
+            conn.then((db) => {
+                db.query(`SELECT * FROM ${this.table}`, (err, res) => {
+                    if(err) {
+                        reject(err);
+                        throw err;
+                    }
+
+                    resolve(res);
+                });
+            });
+        });
+    }
+
     // Create method
     create (object, callback) {
         return new Promise((resolve, reject) => {
