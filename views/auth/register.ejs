@@ -6,18 +6,18 @@
                 <form method="POST" action="">
                     <h1 class="text-center mb-5 quicksand">Registrasi</h1>
                     <div class="form-group">
-                        <label class="text-555 font-weight-bold quicksand" for="nama">nama</label>
-                        <input type="nama" name="nama" class="form-control <% if (messages.nama) { %> is-invalid <% } %>" id="nama" placeholder="nama" autocomplete="off" value="<% if(messages.oldnama) {%><%=messages.oldnama%><%} %>">
-                        <% if (messages.nama) { %> 
+                        <label class="text-555 font-weight-bold quicksand" for="name">nama</label>
+                        <input type="text" name="name" class="form-control <%= (messages.name) ? 'is-invalid' : '' %>" id="name" placeholder="nama" autocomplete="off" value="<%= (messages.oldname) ? messages.oldname : '' %>">
+                        <% if (messages.name) { %> 
                             <div class="invalid-feedback">
-                                <%= messages.nama %> 
+                                <%= messages.name %> 
                             </div>
                         <% } %>
                     </div>
                       
                     <div class="form-group">
                         <label class="text-555 font-weight-bold quicksand" for="email">email</label>
-                        <input type="email" name="email" class="form-control <% if (messages.email) { %> is-invalid <% } %>" id="email" placeholder="email" autocomplete="off" value="<% if(messages.oldemail) {%><%=messages.oldemail%><%} %>">
+                        <input type="email" name="email" class="form-control <%= (messages.email) ? 'is-invalid' : '' %>" id="email" placeholder="email" autocomplete="off" value="<%= (messages.oldemail) ? messages.oldemail : '' %>">
                         <% if (messages.email) { %> 
                             <div class="invalid-feedback">
                                 <%= messages.email %> 
@@ -27,7 +27,7 @@
                     </div>
                     <div class="form-group">
                         <label class="text-555 font-weight-bold quicksand" for="username">username</label>
-                        <input type="username" name="username" class="form-control <% if (messages.username) { %> is-invalid <% } %>" id="username" placeholder="username" autocomplete="off" value="<% if(messages.oldusername) {%><%=messages.oldusername%><%} %>">
+                        <input type="username" name="username" class="form-control <%= (messages.username) ? 'is-invalid' : '' %>" id="username" placeholder="username" autocomplete="off" value="<%= (messages.oldusername) ? messages.oldusername : '' %>">
                         <% if (messages.username) { %> 
                             <div class="invalid-feedback">
                                 <%= messages.username %> 
@@ -36,7 +36,7 @@
                     </div>
                     <div class="form-group">
                         <label class="text-555 font-weight-bold quicksand" for="password">kata sandi</label>
-                        <input type="password" name="password" class="form-control <% if (messages.password) { %> is-invalid <% } %>" id="password" placeholder="kata sandi" autocomplete="off" value="<% if(messages.oldpassword) {%><%=messages.oldpassword%><%} %>">
+                        <input type="password" name="password" class="form-control <%= (messages.password) ? 'is-invalid' : '' %>" id="password" placeholder="kata sandi" autocomplete="off" value="<%= (messages.oldpassword) ? messages.oldpassword : '' %>">
                         <% if (messages.password) { %> 
                             <div class="invalid-feedback">
                                 <%= messages.password %> 

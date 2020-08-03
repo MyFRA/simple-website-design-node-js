@@ -2,7 +2,6 @@
 const RegisterHelper = require('./../../helpers/RegisterHelper');
 const FlashOldInput = require('./../../helpers/FlashOldInput');
 
-
 const RegisterController = {
     show: function(req, res) {
         const data = {
@@ -14,23 +13,22 @@ const RegisterController = {
 
     register: function(req, res) {
         // Input Validation
-        RegisterHelper.validate(req, res)
+        RegisterHelper.validate(req)
 
         // Pass validation, let's create an user
-        .then((value) => {
-            RegisterHelper.createUser(req);
+        .then(() => {
+            RegisterHelper.createUser(req)
             req.flash('success', 'Registrasi akun');
             res.redirect('/user/login');
-        }).
+        })
 
         // Failed validation
-        catch((objError) => {
+        .catch((error) => {
             FlashOldInput(req);
-            req.flash(objError.result.input, objError.result.message);
+            req.flash(error.input, error.message);
             res.redirect('/user/register');
         });
     }
-
 }
 
 // Export

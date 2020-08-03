@@ -17,7 +17,7 @@ const Validator = (req, object, callback) => {
                 // pengecekan kondisi jika required
                 if(rule == 'required') {
                     if(req.body[key] == '') {
-                        callback(true, {
+                        callback({
                             input: key,
                             message: `${key} tidak boleh kosong`,
                         })
@@ -31,7 +31,7 @@ const Validator = (req, object, callback) => {
                     // pengecekan kondisi jika ada batas minimal
                     if(ruleWithVal[0] == 'min') {
                         if(parseInt(req.body[key].length) < parseInt(ruleWithVal[1])) {
-                            callback(true, {
+                            callback({
                                 input: key,
                                 message: `${key} minimal ${parseInt(ruleWithVal[1])} karakter`,
                             });
@@ -41,7 +41,7 @@ const Validator = (req, object, callback) => {
                     // pengecekan kondisi jika ada batas maksimal
                     if(ruleWithVal[0] === 'max') {
                         if(parseInt(req.body[key].length) > parseInt(ruleWithVal[1])) {
-                            callback(true, {
+                            callback({
                                 input: key,
                                 message: `${key} maksimal ${parseInt(ruleWithVal[1])} karakter`,
                             });
@@ -51,7 +51,7 @@ const Validator = (req, object, callback) => {
                     // pengecekan kondisi jika harus sama dengan (equal)
                     if(ruleWithVal[0] == 'equal') {
                         if(req.body[key] != req.body[ruleWithVal[1]]) {
-                            callback(true, {
+                            callback({
                                 input: key,
                                 message: `${key} dan ${ruleWithVal[1]} tidak cocok`,
                             });
