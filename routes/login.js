@@ -1,17 +1,9 @@
-// Require modules
 const express = require('express');
-
-// Require controller
 const LoginController = require('./../controllers/Auth/LoginController');
-
-// Require middlweware
-const AuthMiddleware = require('../middleware/AuthMiddleware');
-
-// Initialization route
+const LoginSystemMiddleware = require('../middleware/LoginSystemMiddleware');
 const Route = express.Router();
 
-// Route
-Route.get('/', AuthMiddleware, LoginController.show);
-Route.post('/', AuthMiddleware, LoginController.login);
+Route.get('/', LoginSystemMiddleware, LoginController.show);
+Route.post('/', LoginSystemMiddleware, LoginController.login);
 
 module.exports = Route;

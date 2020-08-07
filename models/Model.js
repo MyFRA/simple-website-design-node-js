@@ -3,9 +3,9 @@ const conn = require('./../config/config');
 
 // Parent Model
 class Model {
+
     // Table name, obtained from child class
     table;
-
 
     // Get method
     get() {
@@ -24,7 +24,7 @@ class Model {
     }
 
     // Create method
-    create (object, callback) {
+    create (object) {
         return new Promise((resolve, reject) => {
             conn.then((db) => {
                 (async function(table) {
@@ -41,20 +41,26 @@ class Model {
                         }
                     };
             
-                    db.query(`INSERT INTO ${table}(${columns.join()}) VALUES(${askIcon.join()})`, values, (err, res) => {
-                        if(err) {
-                            reject(err);
-                            throw err;
-                        }
-                        resolve(res);
-                    })
+                    const ok = await db.query(`INSERT INTO ${table}(${columns.join()}) VALUES(${askIcon.join()})`, values)
+            
+                    if(ok) {
+                        await db.query(`SELECT * FROM ${table} WHERE id = '${ok[0].insertId}' LIMIT 1`, (err, res) => {
+                            if(err) {
+                                reject(err);
+                                throw err;
+                            } 
+                            
+                            resolve(res[0]);
+                        });
+                    }
+  
                 })(this.table);
             });
         });
     }
 
     // Find by column method
-    findByColumn(column, value, callback) {
+    findByColumn(column, value) {
         return new Promise((resolve, reject) => {
             conn.then((db) => {
                 (async function(table) {

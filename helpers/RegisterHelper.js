@@ -1,12 +1,6 @@
-// Require module
 const bcrypt = require('bcrypt');
-
-// Require helpers
 const Validator = require('./Validator');
-
-// Require model
 const User = require('./../models/User');
-
 const RegisterHelper = {
     // variable to check if pass
     pass: true,
@@ -16,15 +10,15 @@ const RegisterHelper = {
         return new Promise(async(resolve, reject) => {
 
             // Input validation using Validator helper
-            Validator(req, {
-                name: 'required|min:3|max:50',
-                email: 'required|min:3|max:50',
-                username: 'required|min:4|max:50',
-                password: 'required|equal:password_confirmation|min:6|max:15',
-            }, (error) => {
+            await Validator.validate([req.body], {
+                name: 'required:true|min:3|max:50',
+                email: 'required:true|isEmail:true|max:50',
+                username: 'required:true|min:4|max:50|space:false',
+                password: 'required:true|equal:password_confirmation|min:6|max:15',
+            }).then((error) => {
                 RegisterHelper.pass = false;
-                if(error) reject(error);
-            });
+                reject(error);
+            }).catch(() => {});
     
             // Validation if the email is already used
             await User.findByColumn('email', req.body.email)
@@ -71,8 +65,8 @@ const RegisterHelper = {
                 // Create user
                 await User.create({
                     name: req.body.name,
-                    email: req.body.email,
-                    username: req.body.username,
+                    email: req.body.email.toLowerCase(),
+                    username: req.body.username.toLowerCase(),
                     password: hash,
                 })
             })

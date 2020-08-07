@@ -1,4 +1,5 @@
 <%- include('./../partials/header.ejs')  %> 
+
 <section>
     <form action="" method="POST" enctype="multipart/form-data">
       <div class="container container-form-upload">
@@ -16,7 +17,7 @@
               <div class="mt-0">
                 <div class="form-group">
                   <label for="title">Judul</label>
-                  <input type="text" class="form-control <% if(messages.title) {%> is-invalid <%}%>" name="title" id="title" placeholder="masukan judul" value="<%=messages.oldtitle%>">
+                  <input type="text" class="form-control <%= (messages.title) ? 'is-invalid' : '' %>" name="title" id="title" placeholder="masukan judul" value="<%=messages.oldtitle%>">
                   
                   <% if (messages.title) { %> 
                     <div class="invalid-feedback">
@@ -48,7 +49,7 @@
                 </div>
                 <% if (messages.design) { %>
                   <div class="text-danger font-13 mt-1">
-                      <%= messages.design[0] %> 
+                      <%= messages.design %> 
                   </div>
                 <% } %>
               </div>
@@ -65,5 +66,4 @@
     </form>
   </section>
   
-  <script src="assets/app.js"></script>
 <%- include('./../partials/footer.ejs')  %> 

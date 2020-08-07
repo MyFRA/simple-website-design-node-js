@@ -555,4 +555,37 @@
 
 <form id="form-upload-design" action="" method=""></form>
 
+<!-- Stylesheet -->
+<div id="new_stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.1/dist/sweetalert2.min.css">
+</div>
+
+<!-- Script -->
+<div id="new_script">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.1/dist/sweetalert2.min.js"></script>
+
+    <% if (messages.success) { %>
+        <% var messages = messages.success; %>
+        <script>
+            var getMessages = '<%= messages %>';
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'center',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                onOpen: (toast) => {
+                  toast.addEventListener('mouseenter', Swal.stopTimer)
+                  toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+              })
+              
+            Toast.fire({
+            icon: 'success',
+            title: getMessages,
+            })
+        </script>
+    <% } %>
+</div>
+
 <%- include('./../partials/footer.ejs') %> 

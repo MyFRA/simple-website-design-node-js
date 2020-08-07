@@ -1,13 +1,18 @@
-// Require module
 const bcrypt = require('bcrypt');
-
-// Require model
 const User = require('./../models/User');
+const Validator = require('./../helpers/Validator');
 
 const LoginHelper = {
     login: function(req) {
         return new Promise(async(resolve, reject) => {
-            await User.findByColumn('email', req.body.email)
+            
+            await Validator.validate([req.body], {
+                email: 'required:true|isEmail:true',
+            }).then((error) => {
+                reject(error.message);
+            }).catch(()=>{})
+
+            await User.findByColumn('email', req.body.email.toLowerCase())
                 .then((results) => {
                     if(!results) reject('email tidak ditemukan');
                     if(results != undefined) {
@@ -20,5 +25,4 @@ const LoginHelper = {
     } 
 }
 
-// Export
 module.exports = LoginHelper;

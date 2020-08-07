@@ -1,8 +1,9 @@
-// Login and register middleware
 const AuthMiddleware = (request, response, next) => {
-    if(request.session.auth) response.redirect('/');
-    next();
+    if(!request.session.auth) {
+        response.redirect('/user/login')
+    }else {
+        next();
+    };
 }
 
-// Export
 module.exports = AuthMiddleware;

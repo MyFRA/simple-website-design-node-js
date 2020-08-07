@@ -1,15 +1,9 @@
-// Require modules
 const express = require('express');
-
-// Require Controller
 const UploadDesignConstroller = require('./../controllers/UploadDesignController');
-
-// Initialization Route
+const AuthMiddleware = require('./../middleware/AuthMiddleware');
 const Route = express.Router();
 
-// Route
-Route.get('/', UploadDesignConstroller.index);
-Route.post('/', UploadDesignConstroller.upload);
+Route.get('/', AuthMiddleware, UploadDesignConstroller.index);
+Route.post('/', AuthMiddleware, UploadDesignConstroller.upload);
 
-// Export
 module.exports = Route;
